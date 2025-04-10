@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - ITSM Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .heading {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="bg-gray-800 text-white w-64 flex-shrink-0">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold">ITSM Tool</h2>
+            </div>
+            <nav class="mt-4">
+                <a href="dashboard.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-tachometer-alt mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="tickets.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-ticket-alt mr-3"></i>
+                    Tickets
+                </a>
+                <a href="assets.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-laptop mr-3"></i>
+                    Assets
+                </a>
+                <a href="remote-access.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-desktop mr-3"></i>
+                    Remote Access
+                </a>
+                <a href="automation.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-robot mr-3"></i>
+                    Automation
+                </a>
+                <a href="users.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-users mr-3"></i>
+                    Users
+                </a>
+                <a href="reports.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-chart-bar mr-3"></i>
+                    Reports
+                </a>
+                <a href="settings.html" class="flex items-center px-4 py-3 bg-gray-900 text-white">
+                    <i class="fas fa-cog mr-3"></i>
+                    Settings
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <div class="flex items-center">
+                        <h1 class="text-2xl font-semibold text-gray-800">Settings</h1>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 overflow-y-auto p-6">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Settings Navigation -->
+                    <div class="bg-white rounded-lg shadow mb-6">
+                        <nav class="flex border-b">
+                            <button class="px-6 py-3 text-blue-600 border-b-2 border-blue-600 font-medium">
+                                General
+                            </button>
+                            <button class="px-6 py-3 text-gray-500 hover:text-gray-700 font-medium">
+                                Notifications
+                            </button>
+                            <button class="px-6 py-3 text-gray-500 hover:text-gray-700 font-medium">
+                                Integrations
+                            </button>
+                            <button class="px-6 py-3 text-gray-500 hover:text-gray-700 font-medium">
+                                Custom Fields
+                            </button>
+                            <button class="px-6 py-3 text-gray-500 hover:text-gray-700 font-medium">
+                                Security
+                            </button>
+                        </nav>
+                    </div>
+
+                    <!-- General Settings -->
+                    <div class="bg-white rounded-lg shadow p-6 mb-6">
+                        <h2 class="text-lg font-semibold mb-6">General Settings</h2>
+                        
+                        <!-- Organization Details -->
+                        <div class="mb-8">
+                            <h3 class="text-md font-medium mb-4">Organization Details</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Organization Name
+                                    </label>
+                                    <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="ACME Corporation">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Industry
+                                    </label>
+                                    <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>Technology</option>
+                                        <option>Healthcare</option>
+                                        <option>Finance</option>
+                                        <option>Manufacturing</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Localization -->
+                        <div class="mb-8">
+                            <h3 class="text-md font-medium mb-4">Localization</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Time Zone
+                                    </label>
+                                    <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>UTC (GMT+0)</option>
+                                        <option>EST (GMT-5)</option>
+                                        <option>PST (GMT-8)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Date Format
+                                    </label>
+                                    <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>MM/DD/YYYY</option>
+                                        <option>DD/MM/YYYY</option>
+                                        <option>YYYY-MM-DD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email Settings -->
+                        <div class="mb-8">
+                            <h3 class="text-md font-medium mb-4">Email Settings</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        SMTP Server
+                                    </label>
+                                    <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="smtp.company.com">
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                                            SMTP Port
+                                        </label>
+                                        <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="587">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                                            Encryption
+                                        </label>
+                                        <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            <option>TLS</option>
+                                            <option>SSL</option>
+                                            <option>None</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- System Defaults -->
+                        <div>
+                            <h3 class="text-md font-medium mb-4">System Defaults</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Default Ticket Priority
+                                    </label>
+                                    <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>Low</option>
+                                        <option>Medium</option>
+                                        <option>High</option>
+                                        <option>Critical</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                                        Auto-close Resolved Tickets After
+                                    </label>
+                                    <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>24 Hours</option>
+                                        <option>48 Hours</option>
+                                        <option>72 Hours</option>
+                                        <option>1 Week</option>
+                                    </select>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    <label class="ml-2 block text-sm text-gray-900">
+                                        Enable automatic ticket assignment
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                    <label class="ml-2 block text-sm text-gray-900">
+                                        Send email notifications for ticket updates
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Settings -->
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-lg font-semibold">API Settings</h2>
+                            <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                                Generate New Key
+                            </button>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    API Key
+                                </label>
+                                <div class="flex">
+                                    <input type="text" readonly class="flex-1 px-3 py-2 border rounded-l-lg bg-gray-50" value="sk_live_12345678901234567890">
+                                    <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-r-lg hover:bg-gray-300">
+                                        Copy
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-2 block text-sm text-gray-900">
+                                    Enable API access
+                                </label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <label class="ml-2 block text-sm text-gray-900">
+                                    Require API key for all requests
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Add your JavaScript for settings management here
+    </script>
+</body>
+</html>
